@@ -1,16 +1,12 @@
-// CartWidget.js
- 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import  cart from './assets/cart.svg'
+import cart from './assets/cart.svg';
 
-const CartWidget = () => {
-  const itemsInCart = 5; // Número hardcodeado (puedes cambiarlo según necesites)
-
+const CartWidget = ({ cartQuantity }) => {
   return (
     <div className="cart-widget">
       <i className="bi bi-cart"></i>
-      <img src={cart} />
-      <span className="badge bg-secondary">{itemsInCart}</span>
+      <img src={cart} alt="Cart" />
+      {cartQuantity > 0 && <span className="badge bg-secondary">{cartQuantity}</span>}
     </div>
   );
 };

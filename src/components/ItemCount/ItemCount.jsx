@@ -1,17 +1,27 @@
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importa el CSS de Bootstrap
+import React, { useState } from 'react';
 
-const ItemCount = () => {
-  const [quantity, setQuantity] = useState(1); // Asumiendo que 'initial' está definido en algún lugar
+const ItemCount = ({ initial, stock, onAdd }) => {
+  const [quantity, setQuantity] = useState(initial);
 
   const handleIncrement = () => {
     if (quantity < stock) {
       setQuantity(quantity + 1);
+      console.log('Incremented:', quantity + 1);
     }
   };
 
   const handleDecrement = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
+      console.log('Decremented:', quantity - 1);
+    }
+  };
+
+  const handleAddToCart = () => {
+    // Lógica para agregar al carrito, puedes usar la función onAdd
+    if (onAdd) {
+      onAdd(quantity);
+      console.log('Added to cart:', quantity);
     }
   };
 
@@ -34,7 +44,9 @@ const ItemCount = () => {
           </button>
         </div>
         <div className="col">
-          <button className="btn btn-success">Agregar al carrito</button>
+          <button className="btn btn-success" onClick={handleAddToCart}>
+            Agregar al carrito
+          </button>
         </div>
       </div>
     </div>
