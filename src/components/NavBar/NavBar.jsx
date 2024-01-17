@@ -1,3 +1,4 @@
+// NavBar.jsx
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartWidget from '../CartWidget/CartWidget';
@@ -7,8 +8,6 @@ const NavBar = ({ items }) => {
   const [cartQuantity, setCartQuantity] = useState(0);
 
   const handleAddToCart = (quantity) => {
-    // Lógica para agregar al carrito
-    console.log(`Añadir al carrito: ${quantity}`);
     setCartQuantity(cartQuantity + quantity);
   };
 

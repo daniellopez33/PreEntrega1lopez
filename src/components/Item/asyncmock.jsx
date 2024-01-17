@@ -5,13 +5,13 @@ const fetchItems = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       const items = [
-        { id: 1, name: 'Producto 1', description: 'Descripción del Producto 1', price: 20, stock: 20 },
-        { id: 2, name: 'Producto 2', description: 'Descripción del Producto 2', price: 30, stock: 20 },
-        { id: 3, name: 'Producto 3', description: 'Descripción del Producto 3', price: 45, stock: 9 },
-        { id: 4, name: 'Producto 4', description: 'Descripción del Producto 4', price: 300, stock: 150 },
-        { id: 5, name: 'Producto 5', description: 'Descripción del Producto 5', price: 302, stock: 20 },
-        { id: 6, name: 'Producto 6', description: 'Descripción del Producto 6', price: 120, stock: 10 },
-      ];
+        { id: 1, name: 'Bicicleta Urbana', description: 'Perfecta para la ciudad', price: 5000, stock: 15, talles: ['L', 'XL'], category: 'Paseo' },
+        { id: 2, name: 'Mountain Bike', description: 'Ideal para terrenos accidentados', price: 8000, stock: 10, talles: ['M', 'L', 'XL'], category: 'MTB' },
+        { id: 3, name: 'Bicicleta de Ruta', description: 'Velocidad y aerodinámica', price: 12000, stock: 8, talles: ['M', 'L'], category: 'Ruta' },
+        { id: 4, name: 'Bicicleta Plegable', description: 'Compacta y fácil de transportar', price: 6000, stock: 20, talles: ['S', 'M'], category: 'Paseo' },
+        { id: 5, name: 'Bicicleta Eléctrica', description: 'Con asistencia eléctrica', price: 15000, stock: 5, talles: ['M', 'L'], category: 'Eléctrica' },
+        { id: 6, name: 'BMX Freestyle', description: 'Especial para acrobacias y trucos', price: 7000, stock: 12, talles: ['L', 'XL'], category: 'Freestyle' },
+      ];      
       resolve(items);
     }, 1000);
   });
